@@ -1,4 +1,4 @@
-{% set version = "0.2.1" %}
+{% set version = "0.2.3" %}
 
 package:
   name: pydicth5
@@ -6,21 +6,22 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pyDictH5/pyDictH5-{{ version }}.tar.gz
-  sha256: c16ce5604c759fe70496d300de252e8d73d3f3e61edd08f88f36166c2e89d1e0
+  sha256: 0519a562151ca41d0c45e68397aa34b228a2c3baaa9bfd96ec9046e27c9852b9
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
+    - python >=3.6
     - h5py
     - numpy
-    - python
+    - six
 
 test:
   imports:
@@ -28,10 +29,9 @@ test:
 
 about:
   home: http://github.com/lkilcher/pyDictH5
-  license: Apache
+  license: Apache-2.0
+  license_file: LICENSE.txt
   license_family: APACHE
-  # missing file
-  # license_file: 
   summary: Standardized compound data structures for Python
 
 extra:
