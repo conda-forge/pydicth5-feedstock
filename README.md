@@ -3,7 +3,7 @@ About pydicth5
 
 Home: http://github.com/lkilcher/pyDictH5
 
-Package license: Apache
+Package license: Apache-2.0
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pydicth5-feedstock/blob/master/LICENSE.txt)
 
